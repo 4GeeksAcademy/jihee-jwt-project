@@ -38,7 +38,7 @@ def handle_log_in():
     if user is None or not check_password_hash(user.password, password):
         return jsonify({'msg': 'Invalid username or password'}), 401
     
-    expiration = datetime.time.delta(days = 7)    
+    expiration = datetime.timedelta(days = 7)    
     access_token = create_access_token(identity = user.email, expires_delta = expiration)
     return jsonify({'Token': access_token}), 200
 

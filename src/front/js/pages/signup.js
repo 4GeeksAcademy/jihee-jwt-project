@@ -15,7 +15,7 @@ export const Signup = () => {
 		let confirmPassword = event.target.confirmPasswordInput.value;
 
 		if (password !== confirmPassword) {
-			alert('Password does not match');
+			alert('Password does not match. Please try again.');
 			return;
 		}
 
@@ -43,14 +43,6 @@ export const Signup = () => {
 				<div className="col-md-6">
 					<label for="inputConfirmPassword4" className="form-label">Confirm Password</label>
 					<input type="password" name='confirmPasswordInput' className="form-control" id="confirmPassword4" required/>
-				</div>
-				<div className="col-12">
-					<div className="form-check">
-						<input className="form-check-input" type="checkbox" id="gridCheck" />
-							<label className="form-check-label" for="gridCheck">
-								Keep me signed-in
-							</label>
-					</div>
 				</div>
 				<div className="col-12">
 					<button type="submit" className="btn btn-primary">Sign up</button>
